@@ -1,16 +1,24 @@
 public class ControlStatements {
     public static void main(String[] args) {
-        int num = 3;
+        int customNum = 3;
 
-        // if-else
-        if (num > 0) {
-            System.out.println("Positive number");
+        if (customNum > 0) {
+            if (customNum % 2 == 0) {
+                System.out.println("Positive Even number");
+            } else {
+                System.out.println("Positive Odd number");
+            }
+        } else if (customNum < 0) {
+            if (customNum % 2 == 0) {
+                System.out.println("Negative Even number");
+            } else {
+                System.out.println("Negative Odd number");
+            }
         } else {
-            System.out.println("Non-positive number");
+            System.out.println("Zero (neither positive nor negative)");
         }
 
-        // switch
-        switch (num) {
+        switch (customNum) {
             case 1:
                 System.out.println("One");
                 break;
@@ -19,29 +27,26 @@ public class ControlStatements {
                 break;
             case 3:
                 System.out.println("Three");
-                // No break; will fall through
             default:
                 System.out.println("Default case");
         }
 
-        // for loop
         for (int i = 0; i < 3; i++) {
-            if (i == 1) continue; // Skips when i is 1
+            if (i == 1) continue;
             System.out.println("for: " + i);
         }
 
-        // while loop
-        int w = 0;
-        while (w < 2) {
-            System.out.println("while: " + w);
-            w++;
+        int customW = 0;
+        while (customW < 2) {
+            System.out.println("while: " + customW);
+            customW++;
         }
 
-        // do-while loop
-        int dw = 0;
+        int customDW = 0;
         do {
-            System.out.println("do-while: " + dw);
-            dw++;
-        } while (dw < 2);
+            System.out.println("do-while: " + customDW);
+            customDW++;
+        } while (customDW < 2);
+
     }
 }
